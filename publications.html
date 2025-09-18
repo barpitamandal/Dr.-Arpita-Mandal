@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Interests - Dr. Arpita Mandal</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Dr. Arpita Mandal</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Research Interests -->
+    <section id="research" class="section research-interests">
+        <h2 class="section-title">Research Interests</h2>
+        <div class="interests-grid">
+            <div class="interest-card fade-in">
+                <i class="fas fa-water interest-icon"></i>
+                <h3>Boundary Layer Flows</h3>
+                <p>Advanced mathematical modeling of fluid boundary layer phenomena in various engineering applications</p>
+            </div>
+            <div class="interest-card fade-in">
+                <i class="fas fa-magnet interest-icon"></i>
+                <h3>Magnetohydrodynamics</h3>
+                <p>Study of electrically conducting fluids under magnetic field influence with practical applications</p>
+            </div>
+            <div class="interest-card fade-in">
+                <i class="fas fa-fire interest-icon"></i>
+                <h3>Heat & Mass Transfer</h3>
+                <p>Thermal analysis and mass transport mechanisms in complex fluid systems and porous media</p>
+            </div>
+            <div class="interest-card fade-in">
+                <i class="fas fa-microscope interest-icon"></i>
+                <h3>Nanofluids & Hybrid Nanofluids</h3>
+                <p>Investigation of enhanced thermal properties in nanoparticle-suspended fluid systems</p>
+            </div>
+            <div class="interest-card fade-in">
+                <i class="fas fa-calculator interest-icon"></i>
+                <h3>Spectral Methods</h3>
+                <p>Advanced numerical techniques including Spectral Quasi Linearization Method for complex problems</p>
+            </div>
+            <div class="interest-card fade-in">
+                <i class="fas fa-lungs interest-icon"></i>
+                <h3>Biomedical Applications</h3>
+                <p>Oxygen transfer modeling, membrane transport, and oxyhaemoglobin diffusion studies</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/dr-arpitamandal/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://scholar.google.com/citations?user=7S2cyZYAAAAJ&hl=en"><i class="fab fa-google"></i></a>
+            <a href="https://orcid.org/0000-0002-8448-5783"><i class="fab fa-orcid"></i></a>
+            
+        </div>
+        <p>&copy; 2025 Dr. Arpita Mandal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+    </script>
+</body>
+</html>

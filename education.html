@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Journey - Dr. Arpita Mandal</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Dr. Arpita Mandal</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Education -->
+    <section id="education" class="section education">
+        <h2 class="section-title">Educational Journey</h2>
+        <div class="timeline">
+            <div class="timeline-item fade-in">
+                <div class="timeline-content">
+                    <span class="timeline-year">2019-2025</span>
+                    <h3>Ph.D. in Fluid Dynamics & Mathematics</h3>
+                    <p>National Institute of Technology Jamshedpur</p>
+                    <p><em>Thesis: "Mathematical Analysis of Magnetohydrodynamics Boundary Layer Nanofluid Flow Utilizing Spectral Quasilinearization Method"</em></p>
+                </div>
+            </div>
+            <div class="timeline-item fade-in">
+                <div class="timeline-content">
+                    <span class="timeline-year">2012-2014</span>
+                    <h3>Masters in Applied Mathematics</h3>
+                    <p>The University of Burdwan, West Bengal</p>
+                </div>
+            </div>
+            <div class="timeline-item fade-in">
+                <div class="timeline-content">
+                    <span class="timeline-year">2009-2012</span>
+                    <h3>Bachelor of Science in Mathematics</h3>
+                    <p>Berhampore Girls' College (University of Kalyani)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/dr-arpitamandal/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://scholar.google.com/citations?user=7S2cyZYAAAAJ&hl=en"><i class="fab fa-google"></i></a>
+            <a href="https://orcid.org/0000-0002-8448-5783"><i class="fab fa-orcid"></i></a>
+            
+        </div>
+        <p>&copy; 2025 Dr. Arpita Mandal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+    </script>
+</body>
+</html>
